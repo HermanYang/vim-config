@@ -53,21 +53,49 @@ Plugin 'VundleVim/Vundle.vim'
 " different version somewhere else.
 " Plugin 'ascenator/L9', {'name': 'newL9'}
 
+" Directory tree 
 Plugin 'scrooloose/nerdtree'
+
+" Auto complete
 Plugin 'Valloric/YouCompleteMe'
+
+" Enrich status bar
 Plugin 'vim-airline/vim-airline'
-Plugin 'chazy/cscope_maps'
-Plugin 'tpope/vim-surround'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'taglist.vim'
 
-
-"Theme
-Plugin 'flazz/vim-colorschemes'
+" Status bar theme
 Plugin 'vim-airline/vim-airline-themes'
 
-" syntax
+" Cscope shortcut keys
+Plugin 'chazy/cscope_maps'
+
+" Make comment shortcut keys
+Plugin 'scrooloose/nerdcommenter'
+
+" Auto build tags
+Plugin 'taglist.vim'
+
+" Manage most recently used files
+Plugin 'ctrlpvim/ctrlp.vim'
+
+" Enrich git commit files
+Plugin 'airblade/vim-gitgutter'
+
+" visualize indents
+Plugin 'nathanaelkane/vim-indent-guides'
+
+" syntastic checking 
+Plugin 'vim-syntastic/syntastic'
+
+" jumps between header and implement in c/c++
+Plugin 'vim-scripts/a.vim'
+
+" Vim theme
+Plugin 'flazz/vim-colorschemes'
+
+" Cmake syntax
 Plugin 'pboettch/vim-cmake-syntax'
+
+" Cpp syntax
 Plugin 'octol/vim-cpp-enhanced-highlight'
 
 
@@ -108,8 +136,20 @@ let g:cpp_class_decl_highligh = 1
 let g:cpp_experimental_template_highlight = 1
 let g:cpp_concepts_highlight = 1
 "}
-"
+
 
 "{ taglist.vim
 let Tlist_Use_Right_Window = 1
 "} 
+
+
+"{ vim-syntastic/syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+"}
