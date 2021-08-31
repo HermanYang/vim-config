@@ -1,11 +1,13 @@
 #!/bin/bash
 
-cp .vimrc ~/.
+if !which ctags;then
+    echo please install ctag
+fi
 
-sudo apt install ctag
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+cp -f .vimrc ~/.vimrc
+
 vim -c PluginInstall -c q -c q
 
 cd ~/.vim/bundle/YouCompleteMe
-sudo apt-get install python-dev python3-dev
-sudo apt-get install build-essential cmake
 python install.py
