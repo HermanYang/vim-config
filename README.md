@@ -1,2 +1,5 @@
 # vim-config
-This is my vim configuration.
+Run below command to install vim plugins on linux.
+``` bash
+./install.sh
+````
