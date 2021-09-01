@@ -45,14 +45,8 @@ Plugin 'vim-airline/vim-airline'
 " Status bar theme
 Plugin 'vim-airline/vim-airline-themes'
 
-" Cscope shortcut keys
-Plugin 'chazy/cscope_maps'
-
 " Make comment shortcut keys
 Plugin 'scrooloose/nerdcommenter'
-
-" Auto build tags
-Plugin 'taglist.vim'
 
 " Manage most recently used files
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -62,12 +56,6 @@ Plugin 'airblade/vim-gitgutter'
 
 " visualize indents
 Plugin 'nathanaelkane/vim-indent-guides'
-
-" syntastic checking 
-Plugin 'vim-syntastic/syntastic'
-
-" jumps between header and implement in c/c++
-Plugin 'vim-scripts/a.vim'
 
 " Vim theme
 Plugin 'flazz/vim-colorschemes'
@@ -82,17 +70,6 @@ Plugin 'octol/vim-cpp-enhanced-highlight'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
 
 "{ flazz/vim-colorschemes
 syntax enable
@@ -121,15 +98,3 @@ let g:cpp_concepts_highlight = 1
 "{ taglist.vim
 let Tlist_Use_Right_Window = 1
 "} 
-
-
-"{ vim-syntastic/syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-"}
