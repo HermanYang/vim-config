@@ -75,7 +75,6 @@ filetype plugin indent on    " required
 syntax enable
 set t_Co=256
 set background=dark
-colorscheme molokai
 "}
 
 "{ scrooloose/nerdtree'
